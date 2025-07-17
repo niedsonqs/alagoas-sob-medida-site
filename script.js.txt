@@ -1,0 +1,15 @@
+// script.js
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('Alagoas Sob Medida: Página carregada com sucesso!');
+
+    // Exemplo de como você poderia adicionar um efeito de "scroll suave" para os botões de navegação
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+});
